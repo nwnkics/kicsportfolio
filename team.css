@@ -1,0 +1,80 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef5ff;
+  color: #0a2f5c;
+}
+
+.header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.nav-links {
+  margin-top: 10px;
+}
+
+.nav-links a {
+  color: #f0f0f0;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 3px solid #003366;
+}
+
+.team-card h3 {
+  margin: 10px 0 4px;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+.footer {
+  text-align: center;
+  padding: 18px;
+  background-color: #003366;
+  color: white;
+  margin-top: 40px;
+}
