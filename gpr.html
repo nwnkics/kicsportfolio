@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ground Penetrating Radar (GPR) Project</title>
+  <link rel="stylesheet" href="gpr_project.css">
+</head>
+<body>
+  <header>
+    <h1>Ground Penetrating Radar (GPR) Project</h1>
+    <!-- <p>A Comprehensive Overview of UAV-Based Subsurface Imaging System</p> -->
+  </header>
+
+  <section class="section">
+    <h2>Introduction</h2>
+    <p>Ground Penetrating Radar (GPR) is a non-destructive geophysical method using radar pulses to image the subsurface. It is widely used in utility detection, archaeology, environmental studies, and infrastructure monitoring.</p>
+  
+  </section>
+
+  <section class="section">
+    <h2>System Overview</h2>
+    <p>The GPR system operates at 2.2–4.2 GHz for high-resolution imaging. It's UAV-mounted, enabling efficient airborne scans at ~1m altitude.</p>
+    <ul>
+      <li><strong>Radar Front-End:</strong> Transmit and receive antennas</li>
+      <li><strong>Data Acquisition Unit:</strong> STM32 and ESP32 boards</li>
+      <li><strong>GPS & IMU:</strong> For accurate geolocation</li>
+      <li><strong>UAV Camera:</strong> External video module</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Subsystems</h2>
+    <h3>RF Front-End</h3>
+    <p>Utilizes ADF4351 synthesizer, LNA, Mixer, and 2–4 GHz horn antennas with 13dBi gain.</p>
+   
+
+    <h3>Data Acquisition & Control</h3>
+    <p>STM32F407VGT6 handles sampling and triggering. ESP32 manages GPS and SD card logging.</p>
+  
+
+    <h3>Power Supply</h3>
+    <p>12V input regulated to multiple voltages via ATMEGA328P-controlled MOSFETs.</p>
+
+    <h3>Test Bed</h3>
+    <p>Motorized platform for lab testing with adjustable X-Y movement and scan pattern.</p>
+  
+  </section>
+
+  <section class="section">
+    <h2>System Setup & Operation</h2>
+    <ol>
+      <li>Power on GPR and connect to testbed</li>
+      <li>Calibrate using UART: <code>cal</code></li>
+      <li>Start scan: <code>run</code></li>
+      <li>Connect to WiFi: SSID: <strong>GPR</strong>, Password: <strong>12345678</strong></li>
+      <li>Visit <code>192.168.100.1</code> and download <code>gpr_raw.csv</code></li>
+      <li>Visualize using GPR GUI software</li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <h2>GPR GUI and Visualization</h2>
+    <p>The GUI provides three views:</p>
+    <ul>
+      <li><strong>A-Scan:</strong> Single-point signal graph</li>
+      <li><strong>B-Scan:</strong> Heatmap slice across path</li>
+      <li><strong>C-Scan:</strong> Depth-based subsurface view</li>
+    </ul>
+    <p>Also includes video review, mapping, and calibration settings.</p>
+   
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GPR Development  | NWNL</p>
+  </footer>
+</body>
+</html>

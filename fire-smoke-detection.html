@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fire & Smoke Detection | GPR - NWNL</title>
+  <link rel="stylesheet" href="fire-smoke-detection.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Indoor Fire & Smoke Detection System</h1>
+  </header>
+
+  <main class="project-detail-container">
+    <section class="project-intro">
+      <h2>Project Overview</h2>
+      <p>
+        This project focuses on developing a <strong>real-time autonomous fire and smoke detection system</strong> for indoor environments. It uses advanced deep learning and edge computing to ensure accurate, rapid detection on low-cost devices like the <strong>NVIDIA Jetson Nano</strong>.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h3>Custom Dataset Creation</h3>
+      <p>
+        A comprehensive multi-class dataset was created using <strong>Roboflow</strong>. It includes annotated images for fire, smoke, and neutral indoor scenes. The dataset was formatted for both COCO object detection and classification-based pipelines.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h3>Deep Learning Pipeline</h3>
+      <p>
+        Two transformer-based models were implemented:
+        <ul>
+          <li><strong>DETR (Detection Transformer):</strong> For bounding-box based fire/smoke detection.</li>
+          <li><strong>ViT (Vision Transformer):</strong> For image-level scene classification (fire/smoke/normal).</li>
+        </ul>
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h3>Temporal Feature Enhancement</h3>
+      <p>
+        To improve detection in dynamic lighting or moving backgrounds, we extracted <strong>optical flow-based motion features</strong> and fused them with spatial features during model training.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h3>Edge Deployment</h3>
+      <p>
+        The models were optimized and deployed on an <strong>NVIDIA Jetson Nano</strong>, integrated with both RGB and thermal cameras to enable real-time performance in low-resource edge environments.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h3>Web-Based Monitoring Dashboard</h3>
+      <p>
+        A custom dashboard was built using <strong>Django</strong> to monitor system activity. Features include:
+        <ul>
+          <li>Live video stream with detection overlays</li>
+          <li>Real-time incident GPS mapping</li>
+          <li>Event logging and automatic alert generation</li>
+        </ul>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 GPR Project | KICS UET Lahore
+  </footer>
+</body>
+</html>
